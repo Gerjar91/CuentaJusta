@@ -1,20 +1,74 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import AddUser from './components/Home';
+import { Provider } from 'react-redux';
+import store from "./redux/store"
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Home from './components/Home';
+import Calculation from './components/Calculation';
+
+
+interface InputData {
+  user?: String,
+  amount?: string
+}
 
 export default function App() {
+
+  const Stack = createStackNavigator();
+
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Provider store={store}>
+      <NavigationContainer>
+
+        <Stack.Navigator initialRouteName="Home">
+
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{
+              headerShown: false,
+            }} />
+          <Stack.Screen
+            name="Calculation"
+            component={Calculation}
+            options={{
+              headerShown: false,
+            }} />
+        </Stack.Navigator>
+
+      </NavigationContainer>
+    </Provider>
+
+
   );
 }
 
+
+
+
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+
+  buttonNameText: {
+    color: "white"
   },
+  flex1: {
+    flex: 1,
+  },
+  linearGradient: {
+    flex: 1,
+  },
+  buttonName: {
+    alignItems: 'center',
+    justifyContent: "center",
+    backgroundColor: '#C70039',
+    padding: 6,
+    margin: 20,
+    height: 40,
+    width: 150,
+    borderRadius: 40,
+  },
+
 });

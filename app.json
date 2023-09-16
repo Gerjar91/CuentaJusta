@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "CuentasClaras",
+    "name": "Cuentas Claras",
     "slug": "CuentasClaras",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/clarita.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/clarita.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#4A1955"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -19,12 +19,18 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "foregroundImage": "./assets/clarita.png",
+        "backgroundColor": "#4A1955"
+      },
+      "package": "com.gerjar.CuentasClaras"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c6e1960f-88b8-44ac-a9a4-6a5d4c4a3250"
+      }
     }
   }
 }
