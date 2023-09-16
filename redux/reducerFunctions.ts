@@ -21,9 +21,8 @@ export const reducerFunctions = (totalAmount: DataUser[]) => {
     });
 
 
-    /*   payments = [ [ger,facu,200],[ger,facu,100]] 
-    */
-    const payments: any [][] = []; // Objeto para almacenar los pagos
+  
+    const payments: any [][] = [];
 
     for (const pers1 in creditor) {
         if ((creditor[pers1]) > 0) {
