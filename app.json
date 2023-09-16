@@ -4,10 +4,10 @@
     "slug": "CuentasClaras",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/clarita.png",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/clarita.png",
+      "image": "./assets/icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#4A1955"
     },
@@ -19,7 +19,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/clarita.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#4A1955"
       },
       "package": "com.gerjar.CuentasClaras"
