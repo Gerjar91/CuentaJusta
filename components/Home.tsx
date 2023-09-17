@@ -6,7 +6,6 @@ import { useNavigation } from '@react-navigation/native';
 import { useDispatch, useSelector } from 'react-redux'
 import { addUser, calculateAcounts, removeAllUsers } from '../redux/action'
 import { DataState } from '../redux/reducer'
-import { LinearGradient } from 'expo-linear-gradient';
 
 interface InputData {
     user?: string,

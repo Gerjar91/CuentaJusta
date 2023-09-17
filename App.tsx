@@ -6,6 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from './components/Home';
 import Calculation from './components/Calculation';
+import 'react-native-gesture-handler';
 
 
 interface InputData {
