@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Text, TextInput, TouchableOpacity, View, StyleSheet, Image, ScrollView, SafeAreaView, } from 'react-native'
 import Lista from './Lista'
-import { useNavigation } from '@react-navigation/native';
-
 import { useDispatch, useSelector } from 'react-redux'
 import { addUser, calculateAcounts, removeAllUsers } from '../redux/action'
 import { DataState } from '../redux/reducer'
+
+
 
 interface InputData {
     user?: string,
@@ -71,9 +71,10 @@ function Home({ navigation }: any) {
     const handleCalculateAccounts = () => {
         dispatch(calculateAcounts())
         navigation.navigate('Calculation')
+
     }
 
-  
+
 
     return (
 
@@ -83,7 +84,7 @@ function Home({ navigation }: any) {
                 <View style={styles.container}>
                     <Text style={{ color: "white", fontWeight: "500", fontSize: 18 }}>Ingresar persona</Text>
                     <TextInput
-                        placeholder= 'Persona..'
+                        placeholder='Persona..'
                         style={styles.input}
                         onChangeText={onChangeInputAmount}
                         value={input.user}
@@ -108,23 +109,23 @@ function Home({ navigation }: any) {
                         </Text>
                     </TouchableOpacity>
                     {!totalAmount.length ? (
-                        <Image source={require('../assets/clarita.png')} style={{ width: "100%", height: 100, marginTop: 100 }} />
+                        <Image source={require('../assets/CuentaJustaLogo.png')} style={{ width: "80%", height: 100, marginTop: 60 }} />
                     ) : null}
 
                 </View>
-                    <View style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-                        {totalAmount.length ? (
-                            <Text style={{ marginTop: 20, fontWeight: "800", color: "#FFC300", marginBottom: 20, fontSize: 19 }}>TOTAL GASTOS: $ {suma.toLocaleString()} </Text>
+                <View style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+                    {totalAmount.length ? (
+                        <Text style={{ marginTop: 20, fontWeight: "800", color: "#FFC300", marginBottom: 20, fontSize: 19 }}>TOTAL GASTOS: $ {suma.toLocaleString()} </Text>
 
-                        ) : null}
-                        <Lista />
-                        <TouchableOpacity
-                            style={totalAmount.length > 1 ? styles.buttonAdd : styles.buttonAddDisabled}
-                            onPress={handleCalculateAccounts}
-                            disabled={totalAmount.length > 1 ? false : true} >
-                            <Text style={{ color: "black", fontSize: 17, fontWeight: "500" }}>CALCULAR</Text>
-                        </TouchableOpacity>
-                    </View>
+                    ) : null}
+                    <Lista />
+                    <TouchableOpacity
+                        style={totalAmount.length > 1 ? styles.buttonAdd : styles.buttonAddDisabled}
+                        onPress={handleCalculateAccounts}
+                        disabled={totalAmount.length > 1 ? false : true} >
+                        <Text style={{ color: "black", fontSize: 17, fontWeight: "500" }}>CALCULAR</Text>
+                    </TouchableOpacity>
+                </View>
 
 
 
@@ -175,7 +176,7 @@ const styles = StyleSheet.create({
         alignContent: "center",
         alignSelf: "center",
     },
-   
+
     buttonAdd: {
         alignItems: 'center',
         justifyContent: "center",

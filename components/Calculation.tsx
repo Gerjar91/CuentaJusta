@@ -36,12 +36,12 @@ function Calculation({ navigation }: any) {
                         {acount.map((item,index) =>
                             <View style={styles.containerResult} key={index}>
                                 <View style={styles.listAcount} >
-                                    <Text style={{ fontSize: 22, fontWeight: "800" }}>🧑 {item[0]}</Text>
+                                    <Text style={{ fontSize: 22, fontWeight: "800" }}>🙂 {item[0]}</Text>
                                     <Text >    paga a..   </Text>
-                                    <Text style={{ fontSize: 22, fontWeight: "800" }}>🧑 {item[1]}</Text>
+                                    <Text style={{ fontSize: 22, fontWeight: "800" }}>🙂 {item[1]}</Text>
                                 </View>
                                 <View style={styles.price}>
-                                    <Text style={{ fontSize: 28, fontWeight: "900", color: "#D8A500" }}>$ {(item[2].toFixed(2))}</Text>
+                                    <Text style={{ fontSize: 28, fontWeight: "900", color: "#4A1955" }}>$ {(item[2].toFixed(2))}</Text>
                                 </View>
                             </View>
                         )}
@@ -50,7 +50,7 @@ function Calculation({ navigation }: any) {
                             onPress={handleCalculateAccounts}>
                             <Text style={{ color: "black", fontSize: 17, fontWeight: "500" }}>Nueva cuenta</Text>
                         </TouchableOpacity>
-                        <Image source={require('../assets/clarita.png')} style={{ width: "100%", height: 100, marginTop: 50 }} />
+                        <Image source={require('../assets/CuentaJustaLogo.png')} style={{ width: "80%", height: 100, marginTop: 30 }} />
 
                     </View>
                 </View>
