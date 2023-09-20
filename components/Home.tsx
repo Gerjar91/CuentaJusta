@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { Text, TextInput, TouchableOpacity, View, StyleSheet, Image, ScrollView, SafeAreaView, } from 'react-native'
 import Lista from './Lista'
 import { useDispatch, useSelector } from 'react-redux'
-import { addUser, calculateAcounts, removeAllUsers } from '../redux/action'
+import { addUser, calculateAcounts } from '../redux/action'
 import { DataState } from '../redux/reducer'
+import { LinearGradient } from 'expo-linear-gradient'
 
 
 
@@ -74,10 +75,7 @@ function Home({ navigation }: any) {
 
     }
 
-
-
     return (
-
 
         <SafeAreaView style={styles.containerPage}>
             <ScrollView>
@@ -98,7 +96,6 @@ function Home({ navigation }: any) {
                         keyboardType="numeric"
 
                     ></TextInput>
-
                     <TouchableOpacity
                         style={disabled ? styles.buttonAddDisabled : styles.buttonAdd}
                         onPress={addUserToList}
@@ -111,7 +108,6 @@ function Home({ navigation }: any) {
                     {!totalAmount.length ? (
                         <Image source={require('../assets/CuentaJustaLogo.png')} style={{ width: "80%", height: 100, marginTop: 60 }} />
                     ) : null}
-
                 </View>
                 <View style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
                     {totalAmount.length ? (
@@ -126,9 +122,6 @@ function Home({ navigation }: any) {
                         <Text style={{ color: "black", fontSize: 17, fontWeight: "500" }}>CALCULAR</Text>
                     </TouchableOpacity>
                 </View>
-
-
-
             </ScrollView>
         </SafeAreaView>
 

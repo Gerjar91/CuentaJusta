@@ -7,6 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Home from './components/Home';
 import Calculation from './components/Calculation';
 import 'react-native-gesture-handler';
+import { LinearGradient } from 'expo-linear-gradient';
 
 
 interface InputData {
@@ -22,23 +23,20 @@ export default function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-
         <Stack.Navigator initialRouteName="Home">
-
-          <Stack.Screen
-            name="Home"
-            component={Home}
-            options={{
-              headerShown: false,
-            }} />
-          <Stack.Screen
-            name="Calculation"
-            component={Calculation}
-            options={{
-              headerShown: false,
-            }} />
+            <Stack.Screen
+              name="Home"
+              component={Home}
+              options={{
+                headerShown: false,
+              }} />
+            <Stack.Screen
+              name="Calculation"
+              component={Calculation}
+              options={{
+                headerShown: false,
+              }} />
         </Stack.Navigator>
-
       </NavigationContainer>
     </Provider>
 
