@@ -89,8 +89,8 @@ const styles = StyleSheet.create({
 
     },
     price: {
-        backgroundColor: "#DFDCD3",
-        width: "50%",
+        backgroundColor: "white",
+        width: "100%",
         borderRadius: 10,
         display: "flex",
         alignItems: "center",
@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#F0EEE8",
         marginTop: 10,
         padding: 5,
-        borderRadius: 30,
+        borderRadius: 10,
         elevation: 7,
         shadowColor: 'rgba(255,255, 255,1)',
     }

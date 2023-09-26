@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { addUser, calculateAcounts } from '../redux/action'
 import { DataState } from '../redux/reducer'
 import { LinearGradient } from 'expo-linear-gradient'
+import { AdMobBanner, setTestDeviceIDAsync } from 'expo-ads-admob';
 
 
 
@@ -17,7 +18,9 @@ interface InputData {
 function Home({ navigation }: any) {
 
     const dispatch = useDispatch()
-
+    React.useEffect(() => {
+        setTestDeviceIDAsync("EMULATOR");
+    }, []);
 
     //estados para cargar los input 
     const [input, setInput] = useState<InputData>({
@@ -49,7 +52,7 @@ function Home({ navigation }: any) {
 
     }
 
-  
+
 
     // estado para controlar disabled del boton cargar persona 
     const [disabled, setdisabled] = useState(true)
@@ -132,12 +135,15 @@ function Home({ navigation }: any) {
                             disabled={totalAmount.length > 1 ? false : true} >
                             <Text style={{ color: "black", fontSize: 17, fontWeight: "500" }}>CALCULAR</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity
-                            onPress={handleCalculateAccounts}
-                      >
-                            <Text style={{ color: "black", fontSize: 17, fontWeight: "500" }}>CALCULAR</Text>
-                        </TouchableOpacity>
+                        <AdMobBanner
+                            bannerSize="fullBanner"
+                            adUnitID="ca-app-pub-7534339691616724~2690391957"
+                            servePersonalizedAds // true or false
+                            onDidFailToReceiveAdWithError={(e) => console.log(e)}
+                        />
+                       
                     </View>
+
                 </ScrollView>
 
             </LinearGradient>
@@ -170,7 +176,7 @@ const styles = StyleSheet.create({
         flex: 1,
         width: '100%',
         height: '100%',
-        paddingTop:40
+        paddingTop: 40
 
     },
     horizontalLine: {
@@ -232,7 +238,7 @@ const styles = StyleSheet.create({
         width: 150,
         borderRadius: 40,
         opacity: 0
-    }
+      }
 
 
 });
