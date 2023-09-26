@@ -28,7 +28,7 @@ function Calculation({ navigation }: any) {
     const handleCalculateAccounts = () => {
         dispatch(removeAllUsers())
         setTimeout(() => {
-            
+
             navigation.navigate('Home')
         }, 300);
     }
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
         flex: 1,
         width: '100%',
         height: '100%',
-        paddingTop:100
+        paddingTop: 100
     },
     containerPage: {
         flex: 1,

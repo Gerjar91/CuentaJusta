@@ -132,6 +132,11 @@ function Home({ navigation }: any) {
                             disabled={totalAmount.length > 1 ? false : true} >
                             <Text style={{ color: "black", fontSize: 17, fontWeight: "500" }}>CALCULAR</Text>
                         </TouchableOpacity>
+                        <TouchableOpacity
+                            onPress={handleCalculateAccounts}
+                      >
+                            <Text style={{ color: "black", fontSize: 17, fontWeight: "500" }}>CALCULAR</Text>
+                        </TouchableOpacity>
                     </View>
                 </ScrollView>
 

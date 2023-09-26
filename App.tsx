@@ -3,7 +3,7 @@ import AddUser from './components/Home';
 import { Provider } from 'react-redux';
 import store from "./redux/store"
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { CardStyleInterpolators, createStackNavigator } from '@react-navigation/stack';
 import Home from './components/Home';
 import Calculation from './components/Calculation';
 import 'react-native-gesture-handler';
@@ -19,23 +19,28 @@ export default function App() {
 
   const Stack = createStackNavigator();
 
-
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home">
-            <Stack.Screen
-              name="Home"
-              component={Home}
-              options={{
-                headerShown: false,
-              }} />
-            <Stack.Screen
-              name="Calculation"
-              component={Calculation}
-              options={{
-                headerShown: false,
-              }} />
+        <Stack.Navigator initialRouteName="Home"
+          screenOptions={{
+            gestureDirection: "horizontal",
+          }}>
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            
+            options={{
+              headerShown: false,
+            }} />
+          <Stack.Screen
+            name="Calculation"
+            component={Calculation}
+            options={{
+              headerShown: false,
+              cardStyleInterpolator: CardStyleInterpolators.forVerticalIOS, 
+
+            }} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
