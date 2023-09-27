@@ -22,10 +22,6 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/CuentaJustaLogo.png",
         "backgroundColor": "#4A1955"
-      },
-      "package": "com.gerjar.CuentasClaras",
-      "config": {
-        "googleMobileAdsAppId": "ca-app-pub-2547344479047582~7785850471"
       }
     },
     "web": {
@@ -40,5 +36,9 @@
     "updates": {
       "url": "https://u.expo.dev/c6e1960f-88b8-44ac-a9a4-6a5d4c4a3250"
     }
+  },
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-7534339691616724",
+    "ios_app_id": "ca-app-pub-xxxxxxxx~xxxxxxxx"
   }
 }
