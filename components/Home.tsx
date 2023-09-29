@@ -8,7 +8,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
 
 
-const adUnitId = __DEV__ ? TestIds.BANNER : 'ca-app-pub-xxxxxxxxxxxxx/yyyyyyyyyyyyyy';
+//const adUnitId = __DEV__ ? TestIds.BANNER : 'ca-app-pub-xxxxxxxxxxxxx/yyyyyyyyyyyyyy';
 
 interface InputData {
     user?: string,
@@ -134,13 +134,13 @@ function Home({ navigation }: any) {
                             disabled={totalAmount.length > 1 ? false : true} >
                             <Text style={{ color: "black", fontSize: 17, fontWeight: "500" }}>CALCULAR</Text>
                         </TouchableOpacity>
-                        <BannerAd
+                    {/*     <BannerAd
                             unitId={adUnitId}
                             size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
                             requestOptions={{
                                 requestNonPersonalizedAdsOnly: true,
                             }}
-                        />
+                        /> */}
                     </View>
 
                 </ScrollView>
